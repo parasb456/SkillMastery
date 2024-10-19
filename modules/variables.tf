@@ -6,7 +6,6 @@ variable "environment" {
   type = string
 }
 
-
 variable "address_space" {
   type = list(string)
 }

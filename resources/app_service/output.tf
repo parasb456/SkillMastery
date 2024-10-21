@@ -1,7 +1,7 @@
 output "default_hostname" {
-  value = azurerm_app_service.example.default_site_hostname
+  value = azurerm_linux_web_app.example.default_hostname
 }
 
 output "principal_id" {
-  value = azurerm_app_service.example.identity[0].principal_id
+  value = azurerm_linux_web_app.example.identity.0.principal_id
 }

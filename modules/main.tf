@@ -43,6 +43,8 @@ module "app_service" {
   DOCKER_REGISTRY_SERVER_USERNAME = data.azurerm_container_registry.acr.admin_username
   service_plan_id                 = module.app_service_plan.id
   app_service_identity            = var.app_service_identity
+
+  depends_on = [ module.app_service_plan ]
 }
 
 module "app_service_plan" {
